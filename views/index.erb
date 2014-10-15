@@ -1,0 +1,14 @@
+<h1>Audio Files</h1>
+
+<ul>
+  <% @files.each do |file| %>
+    <li>
+      <a href="/<%= file %>">
+        <%= file %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<a href="/mix">Mix</a>
+<a href="/remove_mix">Remove Mix</a>
