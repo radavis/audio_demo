@@ -2,7 +2,7 @@ require 'sinatra'
 
 get '/' do
   @files = Dir["public/*.wav"].map { |file| file.split('/')[1] }
-  @files += Dir["tmp/*.wav"])
+  @files += Dir["tmp/*.wav"]
   erb :index
 end
 
@@ -12,6 +12,6 @@ get '/mix' do
 end
 
 get '/remove_mix' do
-  `rm public/mix.wav`
+  `rm tmp/mix.wav`
   redirect '/'
 end
