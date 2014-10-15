@@ -7,7 +7,7 @@ get '/' do
 end
 
 get '/mix' do
-  `sox public/a.wav public/c_sharp.wav public/mix.wav`
+  `sox public/a.wav public/c_sharp.wav public/mix.wav &`
   redirect '/'
 end
 
