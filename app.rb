@@ -15,3 +15,7 @@ get '/remove_mix' do
   `rm tmp/mix.wav`
   redirect '/'
 end
+
+get '/listen' do
+  send_file('./tmp/mix.wav')
+end
